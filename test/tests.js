@@ -32,7 +32,7 @@ var caps = selectedCaps ? capsConfig[selectedCaps] : undefined;
 var providerPrefix = process.env.PROVIDER_PREFIX ? process.env.PROVIDER_PREFIX + '-' : '';
 var testName = selectedCaps ? providerPrefix + selectedCaps : providerPrefix + 'default';
 
-describe('Search engine tests', function() {
+describe('CAW tests', function() {
 
   this.timeout(99999999);
   var client = {};
