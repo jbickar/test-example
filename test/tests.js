@@ -45,21 +45,21 @@ describe('Search engine tests', function() {
     shoovWebdrivercss.after(done);
   });
 
-  it('should show the Google main search page',function(done) {
+  it('should show CAW on prod',function(done) {
     client
-      .url('https://www.google.com/?gfe_rd=cr&ei=ku8bVbG3K-SG8QeFmICQDg&gws_rd=cr&fg=1')
+      .url('https://sites.stanford.edu/caw/')
       .webdrivercss(testName, {
-        name: 'google'
+        name: 'caw-prod'
       }, shoovWebdrivercss.processResults)
       .call(done);
 
   });
 
-  it('should show the DuckDuckGo main search page',function(done) {
+  it('should show CAW on UAT',function(done) {
     client
-      .url('https://duckduckgo.com/')
+      .url('https://sites-uat.stanford.edu/caw/')
       .webdrivercss(testName, {
-        name: 'duckduck'
+        name: 'caw-uat'
       }, shoovWebdrivercss.processResults)
       .call(done);
 
